@@ -18,9 +18,6 @@
 - Página de informações principais
 - Página de Escolha de Preceptor
 
-
-fonts
-
-roboto for body text
-roboto slab for heading
-montserrat for indicators/dashboard so forth
+- Read the requirements concerning the email and password restriction
+- Do the java Script for those restrictions
+- Front-end of login page : Done
