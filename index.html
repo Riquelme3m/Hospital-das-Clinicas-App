@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial</title>
+    <link rel="shortcut icon" href="images/icons/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="index.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="logos">
+            <!-- <img src="images/RED.png" alt="red2green logo"> -->
+            <img src="images/hospital-das-clinicas.jpg" class="hospital-logo" alt="hospital das clinicas logo">
+            <!-- <img src="images/ebserh.jpg" alt="hospital universitarios federais logo"> -->
+        </div>
+    </header>
+
+    <aside><a href="#">Saiba mais sobre o projeto Red2Green</a></aside>
+    <main class="main">
+        <div class="title">
+            <h1>Insira suas informações para realizar o login</h1>
+        </div>
+        <div class="form">
+            <form action="" method="post">
+                <div class="email-password">
+                    <div class="wrapper">
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" id="email" placeholder="Email" required>
+                    </div>
+                    <div class="wrapper">
+                    <label for="password">Senha:</label>
+                    <input type="password" name="password" id="password" placeholder="Senha" required>
+                    </div>
+                    
+                    <a href="#" class="forgot-password">Esqueci minha senha</a>
+                </div>
+                <div class="submit-btns">
+                    <button type="submit" name="userType" value="common">Entrar</button>
+                    <button type="submit" name="userType" value="common">Entrar Assistencial</button>
+                    <button type="submit" name="userType" value="common">Entrar NIR</button>
+                </div>
+            </form>
+        </div>
+        
+    </main>
+</body>
+
+</html>
