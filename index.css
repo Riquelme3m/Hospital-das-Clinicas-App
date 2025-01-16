@@ -150,6 +150,7 @@ aside a:hover {
     background-color: var(--light-green);
     font-weight: 500;
     letter-spacing: 0.5px;
+    cursor: pointer;
 }
 
 .submit-btns button:hover {

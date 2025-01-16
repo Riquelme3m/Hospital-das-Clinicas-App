@@ -1,0 +1,179 @@
+/* Reseting Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variables */
+:root {
+    --light-green: hsla(129, 49%, 84%, 0.597);
+    --green-hover: hsla(129, 26%, 48%, 0.8);
+}
+
+/* Font Family */
+@font-face {
+    font-family: "Roboto";
+    src: url("/fonts/static/Roboto-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Roboto-slab";
+    src: url("/fonts/static/RobotoSlab-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("/fonts/static/Montserrat-Regular.ttf");
+}
+
+/* Basic Styles */
+body {
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    overflow-y: auto;
+    min-height: fit-content;
+    
+}
+
+.header {
+    background-color: var(--light-green);
+}
+
+.logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.hospital-logo {
+    height: auto;
+    border-radius: 1rem;
+    width: 100%;
+    max-width: 100px;
+}
+
+.red-2-green-logo {
+    display: none;
+}
+
+.ebserh-logo {
+    display: none;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1.5rem;
+    min-height:fit-content;
+
+}
+
+.title {
+    text-align: center;
+    font-size: 0.8rem;
+    
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    padding-left:1rem;
+    padding-right:1rem;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    margin-bottom:2.3rem;
+    margin-top:8%;
+
+}
+.button a{
+    cursor:pointer;
+    background-color: var(--light-green);
+    text-decoration: none;
+    border-radius:0.3rem;
+}
+.button a:hover{
+    background-color: var(--green-hover);
+}
+.button a button{
+    border:none;
+    background-color:transparent;
+    width:9rem;
+    height:2.7rem;
+    cursor: pointer;
+    
+
+}
+
+
+/* Responsive Styles */
+@media screen and (min-width: 768px) {
+    body{
+        height:100vh;
+    }
+    .red-2-green-logo {
+        display: block;
+        height: 7rem;
+        border-radius: 1rem;
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .ebserh-logo {
+        display: block;
+        height: 7rem;
+        border-radius: 1rem;
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .hospital-logo {
+        height: 7rem;
+        border-radius: 1rem;
+        width: 100%;
+        max-width: 7rem;
+    }
+
+    .logos {
+        justify-content: space-evenly;
+    }
+
+    .title {
+        text-align: center;
+        font-size: 1rem;
+    }
+   
+    
+    .text{
+        margin-top:5%;
+        width:70%;
+        line-height: 3rem;
+        margin-left:2rem;
+        font-size:1.3rem;
+        
+        
+    }
+    .button{
+        justify-content: flex-end;
+        margin-right:2rem;
+    }
+    .button {
+        
+       
+        margin-top:4%;
+    
+    }
+
+
+}
