@@ -156,6 +156,10 @@ aside a:hover {
 .submit-btns button:hover {
     background-color: var(--green-hover);
 }
+.submit-btns a button{
+    width:15rem;
+}
+
 
 
 @media screen and (min-width:768px) {
