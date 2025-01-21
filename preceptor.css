@@ -1,0 +1,252 @@
+/*Reseting Styles*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Variables*/
+:root {
+    --light-green: hsla(129, 49%, 84%, 0.597);
+    --green-hover: hsla(129, 26%, 48%, 0.8);
+}
+
+/*Font Family*/
+
+@font-face {
+    font-family: "Roboto";
+    src: url("/fonts/static/Roboto-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Roboto-slab";
+    src: url("/fonts/static/RobotoSlab-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("/fonts/static/Montserrat-Regular.ttf");
+}
+
+/*Basic Styles*/
+body {
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    gap: 1rem;
+
+}
+
+.header {
+    background-color: var(--light-green);
+}
+
+.logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.hospital-logo {
+    height: auto;
+    border-radius: 1rem;
+    width: 100%;
+    max-width: 100px;
+}
+
+.red-2-green-logo {
+    display: none;
+}
+
+.ebserh-logo {
+    display: none;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    gap:6rem;
+}
+.info-editregis{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap:2rem;
+
+}
+.info-editregis p{
+    
+    text-align: center;
+}
+
+.preceptor-list{
+    
+    display:flex;
+    flex-direction: column;
+    justify-content:center ;
+    align-items: center;
+}
+.buttons{
+    display: flex;
+    justify-content: center;
+    gap:5rem;
+}
+
+.edit-registration{
+    padding-right:1rem;
+}
+
+.edit-registration a{
+    
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    color:black;
+    background-color: var(--light-green);
+    cursor: pointer;
+    border-radius: 0.5rem;
+    height:3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:1rem;
+    
+}
+.edit-registration a:hover{
+    background-color: var(--green-hover);
+}
+
+
+
+.dropdown-toggle {
+    width: 70%;
+    padding: 1rem;
+    background-color: var(--light-green);
+    color: black;
+    border: 2px solid var(--light-green);
+    border-radius: 0.5rem;
+    cursor: pointer;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+.dropdown-toggle:hover {
+    background-color: var(--green-hover);
+}
+
+.dropdown-options{
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap:0rem;
+    width:70%;
+    border-radius: 0.5rem;
+    
+}
+.dropdown-options.show {
+    display: flex;
+}
+.dropdown-options div{
+    background-color: hsl(120, 90%, 96%);
+    width:100%;
+    padding:1rem;
+}
+.dropdown-options div:hover{
+    background-color: var(--green-hover);
+}
+.dropdown-toggle{
+    display: flex;
+    justify-content: space-between;
+}
+.dropdown-toggle::after{
+    content: "▼";
+}
+.buttons a {
+    text-decoration: none;
+    color:black;
+    display: inline-block;
+    background-color: var(--light-green);
+    padding:1rem;
+    border-radius: 0.5rem;
+
+}
+.buttons a:hover{
+    background-color: var(--green-hover);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width:768px) {
+    .red-2-green-logo {
+        display: block;
+        height: 7rem;
+        border-radius: 1rem;
+        width: 100%;
+        max-width: 200px;
+
+    }
+
+    .ebserh-logo {
+        display: block;
+        height: 7rem;
+        border-radius: 1rem;
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .hospital-logo {
+        height: 7rem;
+        border-radius: 1rem;
+        width: 100%;
+        max-width: 7rem;
+    }
+
+    .logos {
+        justify-content: space-evenly;
+    }
+    .buttons{
+       
+        justify-content: flex-end;
+        padding-right:4rem;
+    }
+    .personal-info{
+        padding-left:6rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap:1.2rem;
+    }
+    
+    .edit-registration{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-right:4rem;
+    }
+    .info-editregis{
+        flex-direction: row;
+    }
+    
+}

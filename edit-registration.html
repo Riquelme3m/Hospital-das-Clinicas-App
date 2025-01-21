@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ed-reg.css">
+    <link rel="shortcut icon" href="images/icons/favicon-32x32.png" type="image/x-icon">
+    <script src="script.js" def></script>
+</head>
+<body>
+    
+        <header class="header">
+            <div class="logos">
+                <img src="images/RED.png" alt="red2green logo" class="red-2-green-logo">
+                <img src="images/hospital-das-clinicas.jpg" alt="hospital das clinicas logo" class="hospital-logo">
+                <img src="images/ebserh.jpg" alt="hospital universitarios federais logo" class="ebserh-logo">
+            </div>
+        </header>
+        
+        <main class="main">
+            
+                <h1>Informações de Cadastro</h1>
+            
+           
+        <form action="" class="form" id="form-signup">
+            <label for="name">Nome Completo</label>
+            <input type="text" name="name" id="name" required placeholder="Nome Completo">
+            <label for="birth-date">Data de Nascimento</label>
+            <input type="date" name="birth-date" id="birth-date" required placeholder="dd/mm/aaaa">
+            <label for="login">Login</label>
+            <input type="text" name="login" id="login" required placeholder="Login Ebserh" readonly>
+            <label for="celphone">Telefone</label>
+            <input type="text" name="celphone" id="celphone" required placeholder="(XX) XXXXX-XXXX">
+            <label for="password">Criar senha</label>
+            <input type="password" name="password" id="password" required placeholder="************">
+            <label for="password-confirmation">Confirmar Senha</label>
+            <input type="password" name="password-confirmation" id="password-confirmation" required placeholder="************">
+            <div class="custom-select">
+                <div class="selected-option">Escolher Especialidade</div>
+                <div class="dropdown-options">
+                    <div class="option" data-value="clinica-medica">Clínica Médica</div>
+                    <div class="option" data-value="cardiologia">Cardiologia</div>
+                    <div class="option" data-value="pediatria">Pediatria</div>
+                    <div class="option" data-value="gastroenterologia">Gastroenterologia</div>
+                    <div class="option" data-value="estudante-medicina">Estudante de Medicina</div>
+                
+                </div>
+            </div>
+        </form>
+
+        <div class="buttons">
+            <a href="#" class="cancel-button"><button>Cancelar</button></a>
+            <button type="submit" form="form-signup" id="signup-button">Confirmar</button>
+        </div>
+        </main>
+
+       
+    
+    
+</body>
+</html>
