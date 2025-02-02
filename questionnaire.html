@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionário SAFER</title>
+    <link rel="shortcut icon" href="images/icons/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="questionnaire.css">
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="logos">
+            <img src="images/RED.png" alt="red2green logo" class="red-2-green-logo">
+            <img src="images/hospital-das-clinicas.jpg" alt="hospital das clinicas logo" class="hospital-logo">
+            <img src="images/ebserh.jpg" alt="hospital universitarios federais logo" class="ebserh-logo">
+        </div>
+    </header>
+    <main class="main">
+
+        <div class="title">
+            <h1>Questionário SAFER</h1>
+        </div>
+        <div class="patient-info">
+
+            <h3>Nome do Paciente</h3>
+            <h3>Data de nascimento do paciente</h3>
+            <h3>Prontuário do Paciente</h3>
+        </div>
+
+
+        <form action="" class="form">
+            <div class="patient-discharged">
+                <label for="discharged-date">Qual é a data de alta prevista para o paciente?</label>
+                <input type="date" name="discharged-date" id="discharged-date">
+            </div>
+
+            <div class="clinical-criteria">
+                <label for="clinical-criteria">Qual(is) são os critério(s) clínicos para alta do paciente?</label>
+                <textarea name="" id="" placeholder="Critérios Clínicos" rows="10"></textarea>
+            </div>
+
+            <div class="patient-carachteristics">
+                <p>Paciente com alguma das características abaixo?</p>
+                <div class="checkbox-options">
+
+                    <div class="container">
+                        <input type="checkbox" name="patient-carachteristics" id="option-1">
+                        <label for="option-1">Alta prevista com ostomoia</label>
+                    </div>
+                    <div class="container">
+                        <input type="checkbox" name="patient-carachteristics" id="option-2">
+                        <label for="option-2">Alta prevista com cateteres</label>
+                    </div>
+
+
+                    <div class="container">
+                        <input type="checkbox" name="patient-carachteristics" id="option-3">
+                        <label for="option-3">Alta prevista em uso de oxigênio</label>
+                    </div>
+
+
+                    <div class="container">
+                        <input type="checkbox" name="patient-carachteristics" id="option-4">
+                        <label for="option-4">Alta prevista com lesões cutâneas extensa</label>
+                    </div>
+
+
+                    <div class="container">
+                        <input type="checkbox" name="patient-carachteristics" id="option-5">
+                        <label for="option-5">Alta prevista com dreno</label>
+                    </div>
+
+
+                    <div class="container">
+                        <input type="checkbox" name="patient-carachteristics" id="option-6">
+                        <label for="option-6">Situação de rua ou insuficiência familiar</label>
+                    </div>
+
+
+                    <div class="container">
+                        <input type="checkbox" name="patient-carachteristics" id="option-7">
+                        <label for="option-7">Necessidade de discussão ampliada com interconsultores e equipe
+                            multidisciplinar</label>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+            <div class="hospitalization">
+                <p>Se o paciente estivesse sendo admitido hoje no Pronto Socorro a sua condição clínica
+                    determinaria internação?</p>
+                <div class="yes-no">
+
+                    <div>
+                        <input type="radio" name="yes-no" id="yes-hos">
+                        <label for="yes-hos">Sim</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" name="yes-no" id="no-hos">
+                        <label for="no-hos">Não</label>
+                    </div>
+
+                </div>
+            </div>
+            <div class="intervention">
+                <p>As intervenções disgnósticas ou terapêuticas que o paciente receberá hoje poderiam ser
+                    realizadas ambulotoriamente?</p>
+                <div class="yes-no">
+                    <div>
+                        <input type="radio" name="yes-no" id="yes-hos">
+                        <label for="yes-hos">Sim</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" name="yes-no" id="no-hos">
+                        <label for="no-hos">Não</label>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="improvement">
+                <p>O paciente recebeu uma intervenção efetiva hoje para deixá-lo mais próximo à alta hospitalar?</p>
+                <div class="yes-no">
+                    <div>
+                        <input type="radio" name="yes-no" id="yes-hos">
+                        <label for="yes-hos">Sim</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" name="yes-no" id="no-hos">
+                        <label for="no-hos">Não</label>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="patient-waiting">
+                <p>O paciente está aguardando por algo?</p>
+                <div class="yes-no">
+                    <div>
+                        <input type="radio" name="yes-no" id="yes-hos">
+                        <label for="yes-hos">Sim</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" name="yes-no" id="no-hos">
+                        <label for="no-hos">Não</label>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="patient-waiting-options" style="display: block;">
+
+                <div class="checkbox-options">
+
+                    <div class="container">
+                        <input type="checkbox" name="patient-carachteristics" id="option-1" class="exam-checked">
+                        <label for="option-1">Exames</label>
+
+                        <div  class="exam-options">
+                            <div >
+                                <input type="checkbox" name="patient-carachteristics" id="option-2">
+                                <label for="option-2">Radiológico</label>
+                            </div>
+
+
+                            <div >
+                                <input type="checkbox" name="patient-carachteristics" id="option-3">
+                                <label for="option-3">Endoscópico</label>
+                            </div>
+
+
+                            <div >
+                                <input type="checkbox" name="patient-carachteristics" id="option-4">
+                                <label for="option-4">Cardiológico</label>
+                            </div>
+
+
+                            <div >
+                                <input type="checkbox" name="patient-carachteristics" id="option-5">
+                                <label for="option-5">Exame não padronizado</label>
+                            </div>
+
+
+                            <div >
+                                <input type="checkbox" name="patient-carachteristics" id="option-6">
+                                <label for="option-6">Outros</label>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="container">
+                        <input type="checkbox" name="patient-carachteristics" id="option-7">
+                        <label for="option-7">Procedimento Invasivo</label>
+                    </div>
+
+                    <div class="container">
+                        <input type="checkbox" name="patient-carachteristics" id="option-7">
+                        <label for="option-7">Atendimento ou decisão interconsulta</label>
+                    </div>
+                    <div class="container">
+                        <input type="checkbox" name="patient-carachteristics" id="option-7">
+                        <label for="option-7">Organização Familiar</label>
+                    </div>
+                    <div class="container">
+                        <input type="checkbox" name="patient-carachteristics" id="option-7">
+                        <label for="option-7">Transferência e Recursos externos<label>
+                    </div>
+
+
+                </div>
+            </div>
+            
+            <div class="submition">
+                <button type="submit" id="submit-form">Enviar</button>
+                <button href="#" id="go-back">Cancelar</button>
+            </div> 
+           
+
+
+
+
+        </form>
+    </main>
+
+
+</body>
+
+</html>

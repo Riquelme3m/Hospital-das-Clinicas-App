@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAFER Red2Green</title>
+    <link rel="stylesheet" href="main-info-pg.css">
+    <script src="main-info.js" defer></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="logos">
+            <img src="images/RED.png" alt="red2green logo" class="red-2-green-logo">
+            <img src="images/hospital-das-clinicas.jpg" alt="hospital das clinicas logo" class="hospital-logo">
+            <img src="images/ebserh.jpg" alt="hospital universitarios federais logo" class="ebserh-logo">
+            <script src="https://kit.fontawesome.com/3dfc7614c2.js" crossorigin="anonymous"></script>
+        </div>
+    </header>
+
+     <div class="info-search-container">
+        <div class="info">
+            <h3>Nome do Usuário</h3>
+            <p>Especialidade</p>
+        </div>
+        <div class="search">
+            <div class="search-wrapper">
+                <input type="text" class="search-btn" placeholder="Pesquisar Paciente"></input>
+                <i class="fa-solid fa-magnifying-glass icon"></i>
+            </div>
+            <button class="include-patient">Incluir Paciente</button>
+            <a href="#" class="statistic-panel"><button>Painel de Estatística</button></a>
+        </div>
+    </div>
+ 
+
+    <div class="include-patient-pop-up">
+        <div class="text">
+            <h3>Incluir Paciente</h3><i class="fa-solid fa-xmark close-icon"></i>
+        </div>
+        <div class="medical-record"><input type="text" name="" id="" placeholder="Prontuário"></div>
+        <div class="button-continue">
+            <button>Continuar</button>
+        </div>
+    </div>
+
+   
+    
+
+
+    <div class="table-container">
+        <!-- <div class="dropdown-filter active" style="display:block">
+            <div><i class="fa-solid fa-arrow-down-a-z"></i>
+                <p>Classificar de A a Z</p>
+            </div>
+            <div><i class="fa-solid fa-arrow-down-z-a"></i>
+                <p>Classificar de Z a A</p>
+            </div>
+            <div>
+                <p>Classificar por cor</p><i class="fa-solid fa-arrow-right"></i>
+            </div>
+            <div>
+                <p>Filtrar por Cor</p><i class="fa-solid fa-arrow-right"></i>
+            </div>
+            <div>
+                <p>Filtros de Texto</p><i class="fa-solid fa-arrow-right"></i>
+            </div>
+    
+            Sorting by Date
+            <div onclick="sortTable()">
+                <p>Classificar por Data</p><i class="fa-solid fa-arrow-down-up"></i>
+            </div>
+    
+            Date Range Filter
+            <div>
+                <p>Filtrar por Data</p>
+                
+            </div>
+    
+             Quick Date Filters -->
+            
+        <!-- </div> -->
+
+        <table>
+            <thead>
+                <tr>
+                    <th>
+                        Paciente
+
+                    </th>
+                    <th>
+                        Data de Nascimento
+
+                    </th>
+                    <th>
+                        Previsão de Alta
+                        <span class="filter-wrapper">
+                            <i class="fa-solid fa-angle-down filter-icon"></i>
+                            <!-- Place the dropdown filter here -->
+                            <div class="dropdown-filter-one filter">
+                              <div><i class="fa-solid fa-arrow-down-a-z"></i><p>Classificar de A a Z</p></div>
+                              <div><i class="fa-solid fa-arrow-down-z-a"></i><p>Classificar de Z a A</p></div>
+                              <div><p>Classificar por cor</p><i class="fa-solid fa-arrow-right"></i></div>
+                              <div><p>Filtrar por Cor</p><i class="fa-solid fa-arrow-right"></i></div>
+                              <div><p>Filtros de Texto</p><i class="fa-solid fa-arrow-right"></i></div>
+                              <div onclick="sortTable()"><p>Classificar por Data</p><i class="fa-solid fa-arrow-down-up"></i></div>
+                              <div><p>Filtrar por Data</p></div>
+                            </div>
+                          </span>
+                        
+                    </th>
+                    <th>
+                        Tempo de Internação
+                        <span class="filter-wrapper">
+                            <i class="fa-solid fa-angle-down filter-icon"></i>
+                            <!-- Place the dropdown filter here -->
+                            <div class="dropdown-filter-two filter">
+                              <div><i class="fa-solid fa-arrow-down-a-z"></i><p>Classificar de A a Z</p></div>
+                              <div><i class="fa-solid fa-arrow-down-z-a"></i><p>Classificar de Z a A</p></div>
+                              <div><p>Classificar por cor</p><i class="fa-solid fa-arrow-right"></i></div>
+                              <div><p>Filtrar por Cor</p><i class="fa-solid fa-arrow-right"></i></div>
+                              <div><p>Filtros de Texto</p><i class="fa-solid fa-arrow-right"></i></div>
+                              <div onclick="sortTable()"><p>Classificar por Data</p><i class="fa-solid fa-arrow-down-up"></i></div>
+                              <div><p>Filtrar por Data</p></div>
+                            </div>
+                          </span>
+                    </th>
+                    <th>
+                        Red2Green
+                        <span class="filter-wrapper">
+                            <i class="fa-solid fa-angle-down filter-icon"></i>
+                            <!-- Place the dropdown filter here -->
+                            <div class="dropdown-filter-three filter">
+                              <div><i class="fa-solid fa-arrow-down-a-z"></i><p>Classificar de A a Z</p></div>
+                              <div><i class="fa-solid fa-arrow-down-z-a"></i><p>Classificar de Z a A</p></div>
+                              <div><p>Classificar por cor</p><i class="fa-solid fa-arrow-right"></i></div>
+                              <div><p>Filtrar por Cor</p><i class="fa-solid fa-arrow-right"></i></div>
+                              <div><p>Filtros de Texto</p><i class="fa-solid fa-arrow-right"></i></div>
+                              <div onclick="sortTable()"><p>Classificar por Data</p><i class="fa-solid fa-arrow-down-up"></i></div>
+                              <div><p>Filtrar por Data</p></div>
+                            </div>
+                          </span>
+                    </th>
+                    <th></th>  
+                </tr>
+
+            </thead>
+            <tr>
+                <td>Riquelme Batista Gomes da Silva Mendonça</td>
+                <td>24/06/2002</td>
+                <td>20/06/2025</td>
+                <td>4 dias</td>
+                <td>Dia Verde</td>
+                <td class="action-icons"><i class="fa-solid fa-sheet-plastic"
+                        title="Questionário Safer Red2Green"></i><i class="fa-regular fa-clock"
+                        title="Histórico do paciente"></i><i class="fa-solid fa-person" title="Trocar preceptor"></i><i
+                        class="fa-solid fa-ban" title="Inativar paciente"></i><i class="fa-solid fa-arrows-spin"
+                        title="Reativar paciente"></i><i class="fa-solid fa-house-medical" title="Cancelar alta"></i>
+                </td>
+            </tr>
+            <tr>
+                <td>Riquelme Batista Gomes da Silva Mendonça</td>
+                <td>24/06/2002</td>
+                <td>20/06/2025</td>
+                <td>4 dias</td>
+                <td>Dia Verde</td>
+                <td class="action-icons"><i class="fa-solid fa-sheet-plastic"
+                        title="Questionário Safer Red2Green"></i><i class="fa-regular fa-clock"
+                        title="Histórico do paciente"></i><i class="fa-solid fa-person" title="Trocar preceptor"></i><i
+                        class="fa-solid fa-ban" title="Inativar paciente"></i><i class="fa-solid fa-arrows-spin"
+                        title="Reativar paciente"></i><i class="fa-solid fa-house-medical" title="Cancelar alta"></i>
+                </td>
+            </tr>
+            <tr>
+                <td>Riquelme Batista Gomes da Silva Mendonça</td>
+                <td>24/06/2002</td>
+                <td>20/06/2025</td>
+                <td>4 dias</td>
+                <td>Dia Verde</td>
+                <td class="action-icons"><i class="fa-solid fa-sheet-plastic"
+                        title="Questionário Safer Red2Green"></i><i class="fa-regular fa-clock"
+                        title="Histórico do paciente"></i><i class="fa-solid fa-person" title="Trocar preceptor"></i><i
+                        class="fa-solid fa-ban" title="Inativar paciente"></i><i class="fa-solid fa-arrows-spin"
+                        title="Reativar paciente"></i><i class="fa-solid fa-house-medical" title="Cancelar alta"></i>
+                </td>
+            </tr>
+            <tr>
+                <td>Riquelme Batista Gomes da Silva Mendonça</td>
+                <td>24/06/2002</td>
+                <td>20/06/2025</td>
+                <td>4 dias</td>
+                <td>Dia Verde</td>
+                <td class="action-icons"><i class="fa-solid fa-sheet-plastic"
+                        title="Questionário Safer Red2Green"></i><i class="fa-regular fa-clock"
+                        title="Histórico do paciente"></i><i class="fa-solid fa-person" title="Trocar preceptor"></i><i
+                        class="fa-solid fa-ban" title="Inativar paciente"></i><i class="fa-solid fa-arrows-spin"
+                        title="Reativar paciente"></i><i class="fa-solid fa-house-medical" title="Cancelar alta"></i>
+                </td>
+            </tr>
+            <tr>
+                <td>Riquelme Batista Gomes da Silva Mendonça</td>
+                <td>24/06/2002</td>
+                <td>20/06/2025</td>
+                <td>4 dias</td>
+                <td>Dia Verde</td>
+                <td class="action-icons"><i class="fa-solid fa-sheet-plastic"
+                        title="Questionário Safer Red2Green"></i><i class="fa-regular fa-clock"
+                        title="Histórico do paciente"></i><i class="fa-solid fa-person" title="Trocar preceptor"></i><i
+                        class="fa-solid fa-ban" title="Inativar paciente"></i><i class="fa-solid fa-arrows-spin"
+                        title="Reativar paciente"></i><i class="fa-solid fa-house-medical" title="Cancelar alta"></i>
+                </td>
+            </tr>
+            <tr>
+                <td>Riquelme Batista Gomes da Silva Mendonça</td>
+                <td>24/06/2002</td>
+                <td>20/06/2025</td>
+                <td>4 dias</td>
+                <td>Dia Verde</td>
+                <td class="action-icons"><i class="fa-solid fa-sheet-plastic"
+                        title="Questionário Safer Red2Green"></i><i class="fa-regular fa-clock"
+                        title="Histórico do paciente"></i><i class="fa-solid fa-person" title="Trocar preceptor"></i><i
+                        class="fa-solid fa-ban" title="Inativar paciente"></i><i class="fa-solid fa-arrows-spin"
+                        title="Reativar paciente"></i><i class="fa-solid fa-house-medical" title="Cancelar alta"></i>
+                </td>
+            </tr>
+            <tr>
+                <td>Riquelme Batista Gomes da Silva Mendonça</td>
+                <td>24/06/2002</td>
+                <td>20/06/2025</td>
+                <td>4 dias</td>
+                <td>Dia Verde</td>
+                <td class="action-icons"><i class="fa-solid fa-sheet-plastic"
+                        title="Questionário Safer Red2Green"></i><i class="fa-regular fa-clock"
+                        title="Histórico do paciente"></i><i class="fa-solid fa-person" title="Trocar preceptor"></i><i
+                        class="fa-solid fa-ban" title="Inativar paciente"></i><i class="fa-solid fa-arrows-spin"
+                        title="Reativar paciente"></i><i class="fa-solid fa-house-medical" title="Cancelar alta"></i>
+                </td>
+            </tr>
+            <tr>
+                <td>Riquelme Batista Gomes da Silva Mendonça</td>
+                <td>24/06/2002</td>
+                <td>20/06/2025</td>
+                <td>4 dias</td>
+                <td>Dia Verde</td>
+                <td class="action-icons"><i class="fa-solid fa-sheet-plastic"
+                        title="Questionário Safer Red2Green"></i><i class="fa-regular fa-clock"
+                        title="Histórico do paciente"></i><i class="fa-solid fa-person" title="Trocar preceptor"></i><i
+                        class="fa-solid fa-ban" title="Inativar paciente"></i><i class="fa-solid fa-arrows-spin"
+                        title="Reativar paciente"></i><i class="fa-solid fa-house-medical" title="Cancelar alta"></i>
+                </td>
+            </tr>
+            <tr>
+                <td>Riquelme Batista Gomes da Silva Mendonça</td>
+                <td>24/06/2002</td>
+                <td>20/06/2025</td>
+                <td>4 dias</td>
+                <td>Dia Verde</td>
+                <td class="action-icons"><i class="fa-solid fa-sheet-plastic"
+                        title="Questionário Safer Red2Green"></i><i class="fa-regular fa-clock"
+                        title="Histórico do paciente"></i><i class="fa-solid fa-person" title="Trocar preceptor"></i><i
+                        class="fa-solid fa-ban" title="Inativar paciente"></i><i class="fa-solid fa-arrows-spin"
+                        title="Reativar paciente"></i><i class="fa-solid fa-house-medical" title="Cancelar alta"></i>
+                </td>
+            </tr>
+            <tr>
+                <td>Riquelme Batista Gomes da Silva Mendonça</td>
+                <td>24/06/2002</td>
+                <td>20/06/2025</td>
+                <td>4 dias</td>
+                <td>Dia Verde</td>
+                <td class="action-icons"><i class="fa-solid fa-sheet-plastic"
+                        title="Questionário Safer Red2Green"></i><i class="fa-regular fa-clock"
+                        title="Histórico do paciente"></i><i class="fa-solid fa-person" title="Trocar preceptor"></i><i
+                        class="fa-solid fa-ban" title="Inativar paciente"></i><i class="fa-solid fa-arrows-spin"
+                        title="Reativar paciente"></i><i class="fa-solid fa-house-medical" title="Cancelar alta"></i>
+                </td>
+            </tr>
+            <tr>
+                <td>Riquelme Batista Gomes da Silva Mendonça</td>
+                <td>24/06/2002</td>
+                <td>20/06/2025</td>
+                <td>4 dias</td>
+                <td>Dia Verde</td>
+                <td class="action-icons"><i class="fa-solid fa-sheet-plastic"
+                        title="Questionário Safer Red2Green"></i><i class="fa-regular fa-clock"
+                        title="Histórico do paciente"></i><i class="fa-solid fa-person" title="Trocar preceptor"></i><i
+                        class="fa-solid fa-ban" title="Inativar paciente"></i><i class="fa-solid fa-arrows-spin"
+                        title="Reativar paciente"></i><i class="fa-solid fa-house-medical" title="Cancelar alta"></i>
+                </td>
+            </tr>
+
+        </table>
+    </div> 
+
+
+
+
+
+
+
+
+</body>
+
+</html>

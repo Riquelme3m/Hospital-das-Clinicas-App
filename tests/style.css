@@ -1,0 +1,23 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 1rem;
+    width: 100%;
+  }
+  
+  .grid-item {
+    position: relative;
+  }
+  
+  .extra-options {
+    display: none; /* Hidden by default */
+    margin-top: 0.5rem;
+    padding-left: 1rem;
+    border-left: 2px solid #ddd;
+  }
+  
+  .main-checkbox:checked + label + .extra-options {
+    display: block; /* Show when the main checkbox is checked */
+  }
+  
