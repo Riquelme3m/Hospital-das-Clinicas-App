@@ -1,41 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="ed-reg.css">
+    <title>Editar cadastro</title>
+    <link rel="stylesheet" href="./css/ed-reg.css">
     <link rel="shortcut icon" href="images/icons/favicon-32x32.png" type="image/x-icon">
-    <script src="editreg.js" defer></script>
+    <script src="./js/editreg.js" defer></script>
+    <script src="https://kit.fontawesome.com/3dfc7614c2.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    
-        <header class="header">
-            <div class="logos">
-                <img src="images/RED.png" alt="red2green logo" class="red-2-green-logo">
-                <img src="images/hospital-das-clinicas.jpg" alt="hospital das clinicas logo" class="hospital-logo">
-                <img src="images/ebserh.jpg" alt="hospital universitarios federais logo" class="ebserh-logo">
-            </div>
-        </header>
-        
-        <main class="main">
-            
-                <h1>Editar cadastro</h1>
-            
-           
+
+    <header class="header">
+        <div class="logos">
+            <img src="../public/images/RED.png" alt="red2green logo" class="red-2-green-logo">
+            <img src="../public/images/hospital-das-clinicas.jpg" alt="hospital das clinicas logo"
+                class="hospital-logo">
+            <img src="../public/images/ebserh.jpg" alt="hospital universitarios federais logo" class="ebserh-logo">
+        </div>
+    </header>
+
+    <main class="main">
+
+        <h1>Editar cadastro</h1>
+
+
         <form action="" class="form" id="form-signup">
             <label for="name">Nome Completo</label>
-            <input type="text" name="name" id="name" required title="O nome deve conter apenas letras e espaços" placeholder="Nome Completo">
+            <input type="text" name="name" id="name" required title="O nome deve conter apenas letras e espaços"
+                placeholder="Nome Completo">
+
             <label for="birth-date">Data de Nascimento</label>
-            <input type="date" name="birth-date" id="birth-date" required placeholder="dd/mm/aaaa" min="">
+            <input type="date" name="birth-date" id="birth-date" required placeholder="dd/mm/aaaa">
+
             <label for="login">Login</label>
-            <input type="text" name="login" id="login" pattern="[A-Za-z0-9.]{4,}$" placeholder="Login Ebserh" title="O login deve conter ao menos 4 caracteres, apenas letras, números e ponto (.) sem espaços." minlength="4" disabled>
+            <input type="text" name="login" id="login" pattern="[A-Za-z0-9.]{4,}$" placeholder="Login Ebserh"
+                title="O login deve conter ao menos 4 caracteres, apenas letras, números e ponto (.) sem espaços."
+                minlength="4" disabled>
+
             <label for="celphone">Telefone</label>
-            <input type="text" name="celphone" id="celphone" required placeholder="(XX) XXXXX-XXXX" pattern="^\(\d{2}) \d{5}-\d{4}$" title="O telefone deve seguir o formato (XX) XXXXX-XXXX">
-            <label for="password">Criar nova senha</label>
-            <input type="password" name="password" id="password" required placeholder="************" minlength="8" >
-            <label for="password-confirmation">Confirmar nova senha</label>
-            <input type="password" name="password-confirmation" id="password-confirmation" required placeholder="************" minlength="8">
+            <input type="text" name="celphone" id="celphone" required placeholder="(XX) XXXXX-XXXX" minlength="11"
+                title="Número deve ter no mínimo 11 caracteres!">
+            <div class="password">
+                <label for="password">Criar nova senha</label>
+                <input type="password" name="password" id="password" required placeholder="************" minlength="8">
+                <i class="fa-solid fa-eye eye"></i>
+                <i class="fa-solid fa-eye-slash eye-slash" style="display: none;"></i>
+            </div>
+            <div class="password">
+                <label for="password-confirmation">Confirmar nova senha</label>
+                <input type="password" name="password-confirmation" id="password-confirmation" required
+                    placeholder="************" minlength="8">
+                <i class="fa-solid fa-eye eye-confirmation"></i>
+                <i class="fa-solid fa-eye-slash eye-slash-confirmation" style="display:none"></i>
+            </div>
+
+
+
             <div class="custom-select">
                 <div class="selected-option">Escolher Especialidade</div>
                 <div class="dropdown-options">
@@ -44,9 +67,10 @@
                     <div class="option" data-value="pediatria">Pediatria</div>
                     <div class="option" data-value="gastroenterologia">Gastroenterologia</div>
                     <div class="option" data-value="estudante-medicina">Estudante de Medicina</div>
-                
+
                 </div>
             </div>
+
             <p id="specialty-warning" style="display: none;">Escolha uma especialidade</p>
 
         </form>
@@ -55,10 +79,13 @@
             <a href="index.html" class="cancel-button"><button>Cancelar</button></a>
             <button type="submit" form="form-signup" id="signup-button">Cadastrar</button>
         </div>
-        </main>
 
-       
-    
-    
+
+    </main>
+
+
+
+
 </body>
+
 </html>

@@ -4,6 +4,72 @@ const specialtyWarning = document.getElementById('specialty-warning');
 const dropdownOptions = customSelect.querySelector(".dropdown-options");
 const options = customSelect.querySelectorAll(".option");
 const form = document.getElementById("form-signup");
+const eye = document.querySelector(".eye");
+const eyeConfirmation = document.querySelector(".eye-confirmation");
+
+const eyeSlash = document.querySelector(".eye-slash");
+const eyeSlashConfirmation = document.querySelector(".eye-slash-confirmation");
+
+const passwordField = document.getElementById("password");
+const confirmPasswordField = document.getElementById("password-confirmation");
+
+
+
+eye.addEventListener("click", () => {
+
+    if(passwordField.type==="password"){
+        passwordField.type="text";
+    };
+    eye.style.display="none";
+    eyeSlash.style.display="inline";
+
+});
+
+
+eyeSlash.addEventListener("click", () => {
+
+    if(passwordField.type==="text"){
+        passwordField.type="password";
+    };
+    eye.style.display="inline";
+    eyeSlash.style.display="none";
+   
+
+    
+});
+
+eyeConfirmation.addEventListener("click", () => {
+
+    if(confirmPasswordField.type==="password"){
+        confirmPasswordField.type="text";
+    };
+    eyeConfirmation.style.display="none";
+    eyeSlashConfirmation.style.display="inline";
+
+});
+
+
+eyeSlashConfirmation.addEventListener("click", () => {
+
+    if(confirmPasswordField.type==="text"){
+        confirmPasswordField.type="password";
+    };
+    eyeConfirmation.style.display="inline";
+    eyeSlashConfirmation.style.display="none";
+   
+
+    
+});
+
+
+
+
+
+
+
+
+
+
 
 let isSpecialtySelected = false;
 // Toggle dropdown on click
@@ -18,7 +84,7 @@ options.forEach(option => {
         selectedOption.textContent = option.textContent;
         selectedOption.setAttribute("data-value", value);
         isSpecialtySelected = true;
-        specialtyWarning.style.display="none";
+        specialtyWarning.style.display = "none";
         dropdownOptions.classList.remove("show"); // Hide dropdown after selection
     });
 });
@@ -32,9 +98,9 @@ document.addEventListener("click", (event) => {
 
 
 
-
+//Name constraints
 const inputName = document.getElementById("name");
-console.log(inputName);
+
 inputName.addEventListener("input", function (event) {
     const nameRegex = /^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$/;
     if (!nameRegex.test(this.value)) {
@@ -44,12 +110,11 @@ inputName.addEventListener("input", function (event) {
     }
 });
 
-
+//Date constraints
 const inputDate = document.getElementById("birth-date");
-
-inputDate.addEventListener("change", function () {
+inputDate.addEventListener("input", function () {
     const inputField = this;
-    console.log(inputField.value);
+    
     const selectedDate = new Date(this.value);
     const today = new Date();
     const minDate = new Date();
@@ -66,35 +131,29 @@ inputDate.addEventListener("change", function () {
     }
 })
 
-const inputLogin = document.getElementById("login");
 
-inputLogin.addEventListener("input", function () {
-    const loginValue = this.value;
-    const loginRegex = /^[A-Za-z0-9]{4,}$/;
-
-    if (!loginRegex.test(loginValue)) {
-        this.setCustomValidity("O login deve conter ao menos 4 caracteres, apenas letras, números e ponto (.) sem espaços.");
-    } else {
-        this.setCustomValidity("");
-    }
-})
-
+//Cellphone constraints
 const inputNumber = document.getElementById("celphone");
+inputNumber.addEventListener("input", function (e) {
+    let input = e.target.value.replace(/\D/g, ''); // Remove all non-numeric characters
 
-inputNumber.addEventListener("input", function () {
-    const numberValue = this.value;
-    const numberRegex = /^\(\d{2}\) \d{5}-\d{4}$/;
-    if (!numberRegex.test(this.value)) {
-        this.setCustomValidity("O telefone deve seguir o formato (XX) XXXXX-XXXX.");
+    if (input.length > 11) input = input.slice(0, 11); // Limit to 11 digits
+
+    let formattedNumber = '';
+    if (input.length <= 2) {
+        formattedNumber = `(${input}`;
+    } else if (input.length <= 7) {
+        formattedNumber = `(${input.slice(0, 2)}) ${input.slice(2)}`;
     } else {
-        this.setCustomValidity("");
+        formattedNumber = `(${input.slice(0, 2)}) ${input.slice(2, 7)}-${input.slice(7)}`;
     }
-})
+    e.target.value = formattedNumber;
+    
+});
 
 
+//Password constraints
 
-const passwordField = document.getElementById("password");
-const confirmPasswordField = document.getElementById("password-confirmation");
 
 function validatePasswords() {
     if (passwordField.value.length < 8) {
@@ -103,23 +162,21 @@ function validatePasswords() {
         passwordField.setCustomValidity("");
     }
     if (passwordField.value !== confirmPasswordField.value) {
-        confirmPasswordField.setCustomValidity("As senhas não são iguais.");
+        confirmPasswordField.setCustomValidity("As senhas devem ser iguais.");
     } else {
         confirmPasswordField.setCustomValidity("");
     }
 
-    
 }
-passwordField.addEventListener("input",validatePasswords);
-confirmPasswordField.addEventListener("input",validatePasswords);
+passwordField.addEventListener("input", validatePasswords);
+confirmPasswordField.addEventListener("input", validatePasswords);
 validatePasswords();
 
-console.log(form);
+
 
 form.addEventListener("submit", function (e) {
     if (!isSpecialtySelected) {
         e.preventDefault();
-        console.log("here");
         specialtyWarning.style.display = 'block';
         specialtyWarning.style.color = "red";
 
@@ -127,21 +184,20 @@ form.addEventListener("submit", function (e) {
 
         specialtyWarning.style.display = 'none';
         e.preventDefault();
-        window.alert("Cadastro realizado com sucesso.");
+        
         setTimeout(() => {
-            
-            window.location.href = "index.html";
-            
+
+            window.location.href = "loading.html";
+
 
         }, 1000);
     }
 })
 
+localStorage.setItem("name","riquelme");
+console.log(localStorage.getItem("name"));
+localStorage.removeItem("name");
+console.log(localStorage.getItem("name"));
 
-
-
-// const customSelect = document.querySelector(".custom-select");
-// const selectedOption = customSelect.querySelector(".selected-option");
-// const specialtyWarning = document.getElementById('specialty-warning');
-// const dropdownOptions = customSelect.querySelector(".dropdown-options");
-// const options = customSelect.querySelectorAll(".option");
+sessionStorage.setItem("name","batista");
+console.log(sessionStorage.getItem("name"));

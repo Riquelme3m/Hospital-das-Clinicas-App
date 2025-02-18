@@ -127,7 +127,7 @@ body {
 }
 
 .dropdown-options {
-    display:none;
+    display: none;
     background-color: hsla(129, 23%, 77%, 0.597);
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     border: 1px solid #ccc;
@@ -135,13 +135,14 @@ body {
     z-index: 100;
 
 }
-.dropdown-options.show{
+
+.dropdown-options.show {
     display: block;
 }
 
 .dropdown-options div {
     background-color: rgb(253, 253, 253);
-    padding:1rem;
+    padding: 1rem;
 }
 
 .dropdown-options div:hover {
@@ -198,16 +199,63 @@ body {
     cursor: pointer;
     text-align: center;
 }
-#signup-button{
+
+#signup-button {
     background-color: var(--light-green);
 }
-#signup-button:hover{
+
+#signup-button:hover {
     background-color: var(--green-hover);
 }
 
 
+.password {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
 
+.eye {
+    position: absolute;
+    right: 15px;
+    top: 30px;
+    scale: 1.2;
+}
+.eye:hover{
+    cursor: pointer;
+}
 
+.eye-confirmation {
+    position: absolute;
+    right: 15px;
+    top: 30px;
+    scale: 1.2;
+}
+.eye-confirmation:hover{
+    cursor: pointer;
+}
+
+.eye-slash {
+    display: none;
+    position:absolute;
+    right: 15px;
+    top: 30px;
+    scale: 1.2;
+}
+.eye-slash:hover{
+    cursor: pointer;
+}
+
+.eye-slash-confirmation {
+    display: none;
+    position: absolute;
+    right: 15px;
+    top: 30px;
+    scale: 1.2;
+}
+.eye-slash-confirmation:hover{
+    cursor: pointer;
+}
 
 
 
@@ -254,16 +302,16 @@ body {
     }
 
     .buttons a {
-        
+
         width: 8rem;
     }
 
-    #signup-button{
-        width:8rem;
+    #signup-button {
+        width: 8rem;
     }
-    
 
 
-   
+
+
 
 }
