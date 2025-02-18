@@ -1,23 +1,24 @@
 # Notes
 
-- Set up a repository on git hub
-- Set up the structure of the files (html,css,JavaScript)
-- Define a font-family
-- Define the color I will use on the project
-- Define how I will divide my CSS
+-  primeira caixa box - se não redgreen = vermelho 
+  - 
 
+ if(firstbox==false secondbox ==true) redgreen = vermelho
 
+else{
+	//will depend on the checkboxes
+	if(thirdoption ==false ) redgreen = vermelho
+	else{
+		//will depend on the fourth option
+		if(fourthoption == true){
+			redgreen=vermelho;
+		}
+		else{
+			redgreen=verde;
+		}
+	
+	}
+}
 
-- Página Inicial e de login
-- Página Cadastro de Usuário
-- Página de Editar Cadastro
-- Página Sobre o Projeto
-
-
-- Questionário SAFER
-- Página de informações principais
-- Página de Escolha de Preceptor
-
-- Read the requirements concerning the email and password restriction
-- Do the java Script for those restrictions
-- Front-end of login page : Done
+dia 27 - 11 horas da manhã 
+corrigir erros gramaticais
