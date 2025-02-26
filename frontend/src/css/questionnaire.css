@@ -129,6 +129,12 @@ body {
     padding: 0.5rem;
     border: 2px solid var(--green-hover);
 }
+.form .date-error{
+    display: none;
+}
+.form .date-error.visible{
+    display:block;
+}
 
 .form .clinical-criteria {
 
@@ -144,8 +150,14 @@ body {
     padding: 7px;
     border: 2px solid var(--green-hover);
 }
+.form  .text-area-error{
+    display:none;
+}
+.form .text-area-error.visible{
+    display:block;
+}
 
-.patient-carachteristics {
+.patient-charachteristics {
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -153,7 +165,7 @@ body {
 
 }
 
-.patient-carachteristics .checkbox-options {
+.patient-charachteristics .checkbox-options {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 4;
@@ -164,7 +176,17 @@ body {
 
 }
 
-.patient-carachteristics .checkbox-options .container {
+.patient-charachteristics .checkbox-error-message{
+    display: none;
+}
+.patient-charachteristics .checkbox-error-message.visible{
+    display: block;
+}
+.patient-charachteristics .checkbox-options input:hover{
+    cursor: pointer;
+}
+
+.patient-charachteristics .checkbox-options .container {
     padding-left: 1rem;
     display: flex;
     gap:1rem;
@@ -278,6 +300,7 @@ body {
 }
 
 
+
 .patient-waiting .yes-no {
     display: flex;
     flex-direction: row;
@@ -300,6 +323,30 @@ body {
 
 }
 
+.radio-box-error-1{
+    display:none;
+}
+.radio-box-error-1.visible{
+    display:block;
+}
+.radio-box-error-2{
+    display:none;
+}
+.radio-box-error-2.visible{
+    display:block;
+}
+.radio-box-error-3{
+    display:none;
+}
+.radio-box-error-3.visible{
+    display:block;
+}
+.radio-box-error-4{
+    display:none;
+}
+.radio-box-error-4.visible{
+    display:block;
+}
 
 .patient-waiting-options {
     display: flex;
@@ -323,6 +370,16 @@ body {
 
 }
 
+.patient-waiting-options .checkbox-error-message-waiting{
+    display: none;
+}
+.patient-waiting-options  input:hover{
+    cursor: pointer;
+}
+.patient-waiting-options .checkbox-error-message-waiting.visible{
+    display: block;
+}
+
 .patient-waiting-options .checkbox-options .container {
     
     position:relative;
@@ -340,6 +397,12 @@ body {
     border-left:2px solid var(--light-green);
     
  
+}
+.exam-options .error-exam-options{
+    display:none;
+}
+.exam-options .error-exam-options.visible{
+    display:block;
 }
 .patient-waiting-options .checkbox-options .container .exam-checked:checked + label +  .exam-options {
         display: block;
