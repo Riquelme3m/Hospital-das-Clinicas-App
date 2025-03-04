@@ -6,7 +6,7 @@ const options = customSelect.querySelectorAll(".option");
 const form = document.getElementById("form-signup");
 const eye = document.querySelector(".eye");
 const eyeConfirmation = document.querySelector(".eye-confirmation");
-
+const specialtyType = document.querySelector(".specialty-type");
 const eyeSlash = document.querySelector(".eye-slash");
 const eyeSlashConfirmation = document.querySelector(".eye-slash-confirmation");
 
@@ -14,6 +14,7 @@ const passwordField = document.getElementById("password");
 const confirmPasswordField = document.getElementById("password-confirmation");
 
 
+let valueSpecialty;
 
 eye.addEventListener("click", () => {
 
@@ -80,12 +81,14 @@ selectedOption.addEventListener("click", () => {
 // Add event listeners to options
 options.forEach(option => {
     option.addEventListener("click", () => {
-        const value = option.getAttribute("data-value");
+        valueSpecialty = option.getAttribute("data-value");
         selectedOption.textContent = option.textContent;
-        selectedOption.setAttribute("data-value", value);
+        selectedOption.setAttribute("data-value", valueSpecialty);
         isSpecialtySelected = true;
         specialtyWarning.style.display = "none";
-        dropdownOptions.classList.remove("show"); // Hide dropdown after selection
+        dropdownOptions.classList.remove("show");
+        specialtyType.value=valueSpecialty;
+        console.log(specialtyType.value); // Hide dropdown after selection
     });
 });
 
@@ -183,14 +186,14 @@ form.addEventListener("submit", function (e) {
     } else {
 
         specialtyWarning.style.display = 'none';
-        e.preventDefault();
         
-        setTimeout(() => {
+        
+        // setTimeout(() => {
 
-            window.location.href = "loading.html";
+        //     window.location.href = "loading.html";
 
 
-        }, 1000);
+        // }, 1000);
     }
 })
 

@@ -156,8 +156,24 @@ aside a:hover {
 .submit-btns button:hover {
     background-color: var(--green-hover);
 }
-.submit-btns a button{
-    width:15rem;
+
+.submit-btns a button {
+    width: 15rem;
+}
+
+.loginError {
+    display: hidden;
+    font-size: 12px;
+    color: red;
+    height: 20px;
+    width: 105%;
+
+
+}
+
+.loginError.addError {
+    display: block;
+    color: red;
 }
 
 
@@ -197,15 +213,19 @@ aside a:hover {
         font-size: 0.7rem;
     }
 
-    .form{
-        
-        margin-top:3.3rem;
+    .form {
+
+        margin-top: 3.3rem;
     }
+
     main .submit-btns {
         flex-direction: row;
-        justify-content: space-between;
+        /*justify-content: space-between;*/
         gap: 10rem;
         margin-top: 6rem;
+
+        width: 600px;
+
     }
 
     main .submit-btns button {
@@ -215,20 +235,25 @@ aside a:hover {
         background-color: var(--light-green);
         font-weight: 500;
         letter-spacing: 0.5px;
-        padding:0.7rem;
+        padding: 0.7rem;
+        width: 200px;
+
 
     }
+
     .wrapper input {
         border-radius: 0.3rem;
         height: 2.5rem;
         padding: 0.3rem;
         background-color: rgba(222, 216, 216, 0.1);
         outline: none;
-        width:45rem;
+        width: 45rem;
         border: 1px solid black;
+        width: 600px;
     }
-    .wrapper{
-        margin-top:1rem;
+
+    .wrapper {
+        margin-top: 1rem;
     }
-    
+
 }
