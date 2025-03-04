@@ -465,7 +465,15 @@ input[type="checkbox"]{
     scale:2;
 }
 
-
+.red-green-box{
+    background-color: lightgrey;
+    width:100px;
+    height:100px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 @media screen and (min-width:768px) {
     .red-2-green-logo {

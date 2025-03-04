@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.querySelector(".form");
-
+    
     // Input fields
     const dischargedDateInput = document.getElementById("discharged-date");
     const clinicalCriteriaInput = document.getElementById("text-area-input");
@@ -23,6 +23,56 @@ document.addEventListener("DOMContentLoaded", function () {
     const checkboxWaitingError = document.querySelector(".checkbox-error-message-waiting");
     const radioErrors = radioGroups.map(group => document.querySelector(`.radio-box-error-${radioGroups.indexOf(group) + 1}`));
 
+
+    const redTwoGreenSign = document.querySelector(".red-green-box");
+    const patientConditionDeterminesHospitalizationYes = document.querySelector("#cc-yes");
+    const patientConditionDeterminesHospitalizationNo = document.querySelector("#cc-no");
+    const interventionsMightBeOutPatientYes = document.querySelector("#intervention-yes");
+    const interventionsMightBeOutPatientNo = document.querySelector("#intervention-no");
+    const patientReceivedEffectiveInterventionYes = document.querySelector("#effective-int-yes");
+    const patientReceivedEffectiveInterventionNo = document.querySelector("#effective-int-no");
+    const patientWaitingForSomethingYes = document.querySelector("#waiting-yes");
+    const patientWaitingForSomethingNo = document.querySelector("#waiting-no");
+    const red2greenInput = document.getElementById("red2green-data");
+   
+    
+    function updateRedTwoGreenSign(){
+        
+        if(patientConditionDeterminesHospitalizationNo.checked){
+            redTwoGreenSign.style.backgroundColor = "red";
+        }
+        else if(interventionsMightBeOutPatientYes.checked){
+            redTwoGreenSign.style.backgroundColor = "red";
+        }
+        else{
+            if(patientReceivedEffectiveInterventionNo.checked){
+                redTwoGreenSign.style.backgroundColor="red";
+            }
+            else{
+                if(patientWaitingForSomethingYes.checked){
+                    redTwoGreenSign.style.backgroundColor="red";
+                }
+                else{
+                    redTwoGreenSign.style.backgroundColor="green";
+                }
+            }
+        }
+        red2greenInput.value=redTwoGreenSign.style.backgroundColor;
+        console.log(red2greenInput.value); 
+    
+    }
+    updateRedTwoGreenSign();
+    patientConditionDeterminesHospitalizationYes.addEventListener("change",updateRedTwoGreenSign);
+    patientConditionDeterminesHospitalizationNo.addEventListener("change",updateRedTwoGreenSign);
+    interventionsMightBeOutPatientYes.addEventListener("change",updateRedTwoGreenSign);
+    interventionsMightBeOutPatientNo.addEventListener("change",updateRedTwoGreenSign);
+    
+    patientReceivedEffectiveInterventionYes.addEventListener("change",updateRedTwoGreenSign);
+    patientReceivedEffectiveInterventionNo.addEventListener("change",updateRedTwoGreenSign);
+    patientWaitingForSomethingYes.addEventListener("change",updateRedTwoGreenSign);
+    patientWaitingForSomethingNo.addEventListener("change",updateRedTwoGreenSign);
+    
+
     // Utility function to show/hide errors
     function showError(element, message) {
         element.textContent = message;
@@ -36,13 +86,15 @@ document.addEventListener("DOMContentLoaded", function () {
     // Date validation (Brazilian format: DD/MM/YYYY)
     dischargedDateInput.addEventListener("input", function () {
         const datePattern = /^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/\d{4}$/;
-        if (!datePattern.test(dischargedDateInput.value)) {
+        if (dischargedDateInput.value === "") {
+            showError(dateError, "Esse campo é obrigatório.");
+        } else if (!datePattern.test(dischargedDateInput.value)) {
             showError(dateError, "Data inválida! Use o formato DD/MM/AAAA.");
         } else {
             hideError(dateError);
         }
     });
-    
+
 
     // Textarea validation (at least 10 characters)
     clinicalCriteriaInput.addEventListener("input", function () {
@@ -62,12 +114,12 @@ document.addEventListener("DOMContentLoaded", function () {
             hideError(errorElement);
         }
     }
-    exampOptionsInputs.forEach(checkbox=>{
-        checkbox.addEventListener("change",function(){
-            validateCheckboxes(exampOptionsInputs,errorExampOptions);
+    exampOptionsInputs.forEach(checkbox => {
+        checkbox.addEventListener("change", function () {
+            validateCheckboxes(exampOptionsInputs, errorExampOptions);
         })
     })
-    
+
     checkboxes.forEach(checkbox => {
         checkbox.addEventListener("change", function () {
             validateCheckboxes(checkboxes, checkboxError);
@@ -80,6 +132,16 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
+    examInput.addEventListener("change",function(){
+        if(!examInput.isChecked){
+            exampOptionsInputs.forEach(checkbox =>{
+                checkbox.checked=false;
+            })
+        }
+    })
+
+
+   
     // Radio button validation
     function validateRadioButtons(groupName, errorElement) {
         const checked = document.querySelector(`input[name='${groupName}']:checked`);
@@ -103,6 +165,34 @@ document.addEventListener("DOMContentLoaded", function () {
     const waitingYes = document.getElementById("waiting-yes");
     const waitingNo = document.getElementById("waiting-no");
     const waitingOptionsDiv = document.querySelector(".patient-waiting-options");
+    const invasiveProcedure = document.getElementById("option-7.1");
+    const interconsultationCare = document.getElementById("option-8.1");
+    const familyOrganization = document.getElementById("option-9.1");
+    const externalResources = document.getElementById("option-10.1");
+
+    console.log(exampOptionsInputs);
+    console.log(examInput);
+    console.log(invasiveProcedure);
+    console.log(familyOrganization);
+    console.log(interconsultationCare);
+    console.log(externalResources);
+
+    
+
+    waitingNo.addEventListener("click",(waiting_no)=>{
+        if(waitingNo.checked===true){
+            exampOptionsInputs.forEach(checkbox =>{
+                checkbox.checked=false;
+            })
+            
+
+            examInput.checked=false;
+            invasiveProcedure.checked=false;
+            interconsultationCare.checked=false;
+            familyOrganization.checked=false;
+            externalResources.checked=false;
+        }
+    })
 
     function toggleWaitingOptions() {
         if (waitingYes.checked) {
@@ -122,11 +212,16 @@ document.addEventListener("DOMContentLoaded", function () {
     // Form validation on submit
     form.addEventListener("submit", function (event) {
         let isValid = true;
-
+        
+        
         // Validate date
         if (!/^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/\d{4}$/.test(dischargedDateInput.value)) {
             showError(dateError, "Data inválida! Use o formato DD/MM/AAAA.");
             isValid = false;
+        }
+        if(dischargedDateInput.value===""){
+            showError(dateError,"Esse campo é obrigatório");
+            isValid=false;
         }
 
         // Validate textarea
@@ -145,14 +240,14 @@ document.addEventListener("DOMContentLoaded", function () {
             if (![...checkboxesWaiting].some(checkbox => checkbox.checked)) {
                 showError(checkboxWaitingError, "Selecione pelo menos uma opção .");
                 isValid = false;
-                
+
             }
 
         }
-        if(examInput.checked){
-            if(![...exampOptionsInputs].some(checkbox=>checkbox.checked)){
-                showError(errorExampOptions,"Selecione pelo menos uma opção para exame.");
-                isValid=false;
+        if (examInput.checked) {
+            if (![...exampOptionsInputs].some(checkbox => checkbox.checked)) {
+                showError(errorExampOptions, "Selecione pelo menos uma opção para exame.");
+                isValid = false;
             }
         }
 

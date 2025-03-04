@@ -56,7 +56,7 @@
                         <label for="option-1">Alta prevista com ostomia</label>
                     </div>
                     <div class="container">
-                        <input type="checkbox" name="patient-carachteristics" id="option-2" value=">Alta prevista com cateteres">
+                        <input type="checkbox" name="patient-carachteristics" id="option-2" value="Alta prevista com cateteres">
                         <label for="option-2">Alta prevista com cateteres</label>
                     </div>
 
@@ -103,12 +103,12 @@
                 <div class="yes-no first-radio-box">
 
                     <div>
-                        <input type="radio" name="clinical-condition" id="cc-yes" >
+                        <input type="radio" name="clinical-condition" id="cc-yes"  value="yes">
                         <label for="yes-hos">Sim</label>
                     </div>
 
                     <div>
-                        <input type="radio" name="clinical-condition" id="cc-no">
+                        <input type="radio" name="clinical-condition" id="cc-no" value="no">
                         <label for="no-hos">Não</label>
                     </div>
                     
@@ -120,12 +120,12 @@
                     ambulatorialmente?</p>
                 <div class="yes-no second-radio-box">
                     <div>
-                        <input type="radio" name="intervention" id="intervention-yes" >
+                        <input type="radio" name="intervention" id="intervention-yes" value="yes">
                         <label for="yes-hos">Sim</label>
                     </div>
 
                     <div>
-                        <input type="radio" name="intervention" id="intervention-no">
+                        <input type="radio" name="intervention" id="intervention-no" value="no">
                         <label for="no-hos">Não</label>
                     </div>
 
@@ -137,12 +137,12 @@
                 <p>O paciente recebeu uma intervenção efetiva hoje para deixá-lo mais próximo à alta hospitalar?</p>
                 <div class="yes-no third-radio-box">
                     <div>
-                        <input type="radio" name="effective-int" id="effective-int-yes" >
+                        <input type="radio" name="effective-int" id="effective-int-yes" value="yes">
                         <label for="yes-hos">Sim</label>
                     </div>
 
                     <div>
-                        <input type="radio" name="effective-int" id="effective-int-no">
+                        <input type="radio" name="effective-int" id="effective-int-no" value="no">
                         <label for="no-hos">Não</label>
                     </div>
 
@@ -154,12 +154,12 @@
                 <p>O paciente está aguardando por algo?</p>
                 <div class="yes-no fourth-radio-box">
                     <div>
-                        <input type="radio" name="waiting" id="waiting-yes" >
+                        <input type="radio" name="waiting" id="waiting-yes"  value="yes">
                         <label for="yes-hos">Sim</label>
                     </div>
 
                     <div>
-                        <input type="radio" name="waiting" id="waiting-no">
+                        <input type="radio" name="waiting" id="waiting-no" value="no">
                         <label for="no-hos">Não</label>
                     </div>
 
@@ -173,36 +173,36 @@
                 <div class="checkbox-options">
 
                     <div class="container">
-                        <input type="checkbox" name="patient-waiting" id="option-1" class="exam-checked" >
+                        <input type="checkbox" name="medical-examination" id="option-1" class="exam-checked" value="yes" >
                         <label for="option-1">Exames</label>
 
                         <div class="exam-options">
                             <div>
-                                <input type="checkbox" name="patient-waiting-exam" id="option-1-2" >
+                                <input type="checkbox" name="patient-waiting" id="option-1-2" value="Exame radiológico" >
                                 <label for="option-2">Radiológico</label>
                             </div>
 
 
                             <div>
-                                <input type="checkbox" name="patient-waiting-exam" id="option-1-3" >
+                                <input type="checkbox" name="patient-waiting" id="option-1-3" value="Exame endoscópico">
                                 <label for="option-3">Endoscópico</label>
                             </div>
 
 
                             <div>
-                                <input type="checkbox" name="patient-waiting-exam" id="option-1-4" >
+                                <input type="checkbox" name="patient-waiting" id="option-1-4" value="Exame cardiológico">
                                 <label for="option-4">Cardiológico</label>
                             </div>
 
 
                             <div>
-                                <input type="checkbox" name="patient-waiting-exam" id="option-1-5" >
+                                <input type="checkbox" name="patient-waiting" id="option-1-5" value="Exame não padronizado" >
                                 <label for="option-5">Exame não padronizado</label>
                             </div>
 
 
                             <div>
-                                <input type="checkbox" name="patient-waiting-exam" id="option-1-6" >
+                                <input type="checkbox" name="patient-waiting" id="option-1-6" value="Outros tipos de exames" >
                                 <label for="option-6">Outros</label>
                             </div>
                             <p class="error-exam-options" style="color:red;margin-top: 10px;">Pelo menos uma opção deve ser selecionada acima</p>
@@ -213,20 +213,20 @@
 
 
                     <div class="container">
-                        <input type="checkbox" name="patient-waiting" id="option-7.1" >
+                        <input type="checkbox" name="patient-waiting" id="option-7.1" value="Procedimento invasivo" >
                         <label for="option-7">Procedimento Invasivo</label>
                     </div>
 
                     <div class="container">
-                        <input type="checkbox" name="patient-waiting" id="option-8.1" >
+                        <input type="checkbox" name="patient-waiting" id="option-8.1" value="Atendimento ou decisão interconsulta" >
                         <label for="option-7">Atendimento ou decisão interconsulta</label>
                     </div>
                     <div class="container">
-                        <input type="checkbox" name="patient-waiting" id="option-9.1">
+                        <input type="checkbox" name="patient-waiting" id="option-9.1" value="Organização familiar">
                         <label for="option-7">Organização Familiar</label>
                     </div>
                     <div class="container">
-                        <input type="checkbox" name="patient-waiting" id="option-10.1" >
+                        <input type="checkbox" name="patient-waiting" id="option-10.1" value="Transferência e recursos externos" >
                         <label for="option-7">Transferência e recursos externos<label>
                     </div>
 
@@ -235,6 +235,10 @@
                 <p class="checkbox-error-message-waiting" style="margin-top: 10px; color:red;">Pelo menos uma opção deve ser selecionada acima</p>
 
             </div>
+            <div class="red-green-box">
+                Red2Green
+            </div>
+            <input type="hidden" name="red2green" id="red2green-data">
             
             <div class="submition">
                 <button type="submit" id="submit-form">Enviar</button>

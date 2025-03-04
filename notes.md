@@ -3,7 +3,7 @@
 -  primeira caixa box - se não redgreen = vermelho 
   - 
 
- if(firstbox==false secondbox ==true) redgreen = vermelho
+ if(firstSentence==false secondbox ==true) redgreen = vermelho
 
 else{
 	//will depend on the checkboxes
