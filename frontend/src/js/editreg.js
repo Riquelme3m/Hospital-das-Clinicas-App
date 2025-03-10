@@ -18,48 +18,48 @@ let valueSpecialty;
 
 eye.addEventListener("click", () => {
 
-    if(passwordField.type==="password"){
-        passwordField.type="text";
+    if (passwordField.type === "password") {
+        passwordField.type = "text";
     };
-    eye.style.display="none";
-    eyeSlash.style.display="inline";
+    eye.style.display = "none";
+    eyeSlash.style.display = "inline";
 
 });
 
 
 eyeSlash.addEventListener("click", () => {
 
-    if(passwordField.type==="text"){
-        passwordField.type="password";
+    if (passwordField.type === "text") {
+        passwordField.type = "password";
     };
-    eye.style.display="inline";
-    eyeSlash.style.display="none";
-   
+    eye.style.display = "inline";
+    eyeSlash.style.display = "none";
 
-    
+
+
 });
 
 eyeConfirmation.addEventListener("click", () => {
 
-    if(confirmPasswordField.type==="password"){
-        confirmPasswordField.type="text";
+    if (confirmPasswordField.type === "password") {
+        confirmPasswordField.type = "text";
     };
-    eyeConfirmation.style.display="none";
-    eyeSlashConfirmation.style.display="inline";
+    eyeConfirmation.style.display = "none";
+    eyeSlashConfirmation.style.display = "inline";
 
 });
 
 
 eyeSlashConfirmation.addEventListener("click", () => {
 
-    if(confirmPasswordField.type==="text"){
-        confirmPasswordField.type="password";
+    if (confirmPasswordField.type === "text") {
+        confirmPasswordField.type = "password";
     };
-    eyeConfirmation.style.display="inline";
-    eyeSlashConfirmation.style.display="none";
-   
+    eyeConfirmation.style.display = "inline";
+    eyeSlashConfirmation.style.display = "none";
 
-    
+
+
 });
 
 
@@ -87,7 +87,7 @@ options.forEach(option => {
         isSpecialtySelected = true;
         specialtyWarning.style.display = "none";
         dropdownOptions.classList.remove("show");
-        specialtyType.value=valueSpecialty;
+        specialtyType.value = valueSpecialty;
         console.log(specialtyType.value); // Hide dropdown after selection
     });
 });
@@ -117,7 +117,7 @@ inputName.addEventListener("input", function (event) {
 const inputDate = document.getElementById("birth-date");
 inputDate.addEventListener("input", function () {
     const inputField = this;
-    
+
     const selectedDate = new Date(this.value);
     const today = new Date();
     const minDate = new Date();
@@ -151,7 +151,7 @@ inputNumber.addEventListener("input", function (e) {
         formattedNumber = `(${input.slice(0, 2)}) ${input.slice(2, 7)}-${input.slice(7)}`;
     }
     e.target.value = formattedNumber;
-    
+
 });
 
 
@@ -184,23 +184,13 @@ form.addEventListener("submit", function (e) {
         specialtyWarning.style.color = "red";
 
     } else {
-
+        console.log("sending form");
         specialtyWarning.style.display = 'none';
-        
-        
-        // setTimeout(() => {
-
-        //     window.location.href = "loading.html";
+        setTimeout(() => {
+            window.location.href = "./edit-sign.html"; 
+        },100);
 
 
-        // }, 1000);
+
     }
 })
-
-localStorage.setItem("name","riquelme");
-console.log(localStorage.getItem("name"));
-localStorage.removeItem("name");
-console.log(localStorage.getItem("name"));
-
-sessionStorage.setItem("name","batista");
-console.log(sessionStorage.getItem("name"));

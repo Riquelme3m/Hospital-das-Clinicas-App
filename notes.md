@@ -20,5 +20,9 @@ else{
 	}
 }
 
-dia 27 - 11 horas da manhã 
-corrigir erros gramaticais
+- info page - 100% done
+- questionnaire page - 100% done
+- login page - 100% done
+- preceptor page - (1 preceptor has N patients))
+- On the table I will copy this object and show the patients of this preceptor
+- if editing personal information goes successfully , 

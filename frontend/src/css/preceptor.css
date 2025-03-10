@@ -39,6 +39,8 @@ body {
 
 }
 
+
+
 .header {
     background-color: var(--light-green);
 }
@@ -125,8 +127,8 @@ main{
 
 
 .dropdown-toggle {
-    width: 70%;
-    padding: 1rem;
+    width: 400px;
+    padding: rem;
     background-color: var(--light-green);
     color: black;
     border: 2px solid var(--light-green);
@@ -163,10 +165,10 @@ main{
 }
 .dropdown-toggle{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 .dropdown-toggle::after{
-    content: "▼";
+    content: "  ▼";
 }
 .buttons a {
     text-decoration: none;
@@ -181,6 +183,43 @@ main{
     background-color: var(--green-hover);
 }
 
+.dropdown-options {
+    max-height: 25rem; /* Limits height */
+    overflow-y: auto; /* Enables vertical scrolling */
+    border: 1px solid #ccc;
+    position: absolute;
+    width: 30rem;
+    background: white;
+    display: none;
+    z-index: 1000;
+}
+
+.dropdown-options.show {
+    display: block;
+}
+
+.option {
+    padding: 8px;
+    cursor: pointer;
+}
+
+.option:hover {
+    background-color: #f0f0f0;
+}
+
+.dropdown-toggle {
+    padding: 15px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    display: inline-block;
+    width: 30rem;
+    text-align: center;
+}
+
+.buttons a.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+}
 
 
 

@@ -1,11 +1,11 @@
 
 
-const MOCK_USER_ASSISTENTIAL={
-    name:"Riquelme Batista Gomes da Silva",
+export const MOCK_USER_ASSISTENTIAL={
+    name:"Mariana",
     birthDate:"24/06/2002",
-    login:"riquelme3m",
+    login:"mariana",
     cellphone:"(38)988670683",
-    password:"matador123",
+    password:"mariana123",
     role:"assistencial",
     isStudent:"no",
     isAdmin:"no",
