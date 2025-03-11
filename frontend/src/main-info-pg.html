@@ -36,7 +36,8 @@
                 <i class="fa-solid fa-magnifying-glass icon"></i>
             </div>
             <button class="include-patient">Incluir Paciente</button>
-            <a href="#" class="statistic-panel"><button>Painel de Estatística</button></a>
+            <a href="statistics.html" class="statistic-panel"><button>Painel de Estatística</button></a>
+            <a href="preceptor.html" class="statistic-panel"><button>Voltar</button></a>
         </div>
     </div>
 
@@ -65,7 +66,7 @@
                         Preceptor
 
                     </th>
-                    <th>
+                    <th class="patient">
                         Paciente
 
                     </th>
@@ -75,22 +76,46 @@
                     </th>
                     <th>
                         Leito
-                        <i class="fa-solid fa-angle-down filter-icon"></i>
+                        <i class="fa-solid fa-angle-down filter-icon ward-filter-icon"></i>
+
+                        <div class="dropdown ward-dropdown hidden">
+                            <div class="dropdown-item" data-value="L3">L3</div>
+                            <div class="dropdown-item" data-value="L4">L4</div>
+                            <div class="dropdown-item" data-value="L5">L5</div>
+                            <div class="dropdown-item" data-value="All">Todos</div>
+                        </div>
 
                     </th>
                     <th>
                         Ala de Internação
-                        <i class="fa-solid fa-angle-down filter-icon"></i>
+                        <i class="fa-solid fa-angle-down filter-icon hosp-filter-icon"></i>
+
+                        <div class="dropdown hosp-dropdown hidden">
+                            <div class="dropdown-item" data-value="ALA-1">ALA-1</div>
+                            <div class="dropdown-item" data-value="ALA-2">ALA-2</div>
+                            <div class="dropdown-item" data-value="ALA-3">ALA-3</div>
+                            <div class="dropdown-item" data-value="ALA-4">ALA-4</div>
+                            <div class="dropdown-item" data-value="All">Todos</div>
+                        </div>
 
                     </th>
                     <th>
                         Previsão de alta
                         <i class="fa-solid fa-angle-down filter-icon"></i>
 
+
                     </th>
                     <th>
                         Tempo de internação
-                        <i class="fa-solid fa-angle-down filter-icon"></i>
+                        <i class="fa-solid fa-angle-down filter-icon hospitalization-time-filter-icon"></i></i>
+
+                        <div class="dropdown hospitalization-dropdown hidden">
+                            <div class="dropdown-item" data-value="6">Menor ou igual à 6 dias</div>
+                            <div class="dropdown-item" data-value="7-10">Entre 7 e 10 dias</div>
+                            <div class="dropdown-item" data-value="11-19">Entre 11 e 19 dias</div>
+                            <div class="dropdown-item" data-value=">=20">Maior ou igual à 20 dias</div>
+                            <div class="dropdown-item" data-value="All">Todos</div>
+                        </div>
 
                     </th>
                     <th>
@@ -100,6 +125,7 @@
                         <div class="dropdown red2green-dropdown hidden">
                             <div class="dropdown-item" data-value="Vermelho">Vermelho</div>
                             <div class="dropdown-item" data-value="Verde">Verde</div>
+                            <div class="dropdown-item" data-value="Preencher">Preencher</div>
                             <div class="dropdown-item" data-value="All">Todos</div>
                         </div>
 
@@ -118,7 +144,7 @@
 
 
                     </th>
-                    <th>
+                    <th class="actions">
                         Ações
 
                     </th>
@@ -126,20 +152,23 @@
                 </tr>
 
             </thead>
+           
+            
             <tr>
                 <td>Mariana Gonçalves Fonseca Pena</td>
                 <td>Riquelme Batista Gomes da Silva</td>
                 <td>24/06/2002</td>
-                <td>B2</td>
-                <td>ALA 18</td>
-                <td>4 Dias</td>
-                <td>10 dias</td>
+                <td>L5</td>
+                <td>ALA-4</td>
+                <td>05/11/2025</td>
+                <td>15 dias</td>
                 <td>Vermelho</td>
                 <td>Ativado</td>
                 <td class="action-icons">
-                    <a href="questionnaire.html"><i class="fa-solid fa-sheet-plastic"
-                            title="Questionário Safer Red2Green"></i></a>
-                    <a href="patient-records.html"><i class="fa-regular fa-clock" title="Histórico do paciente"></i></a>
+                    <i class="fa-solid fa-sheet-plastic" title="Questionário Safer Red2Green"><a
+                            href="questionnaire.html"></a></i>
+                    <i class="fa-regular fa-clock" title="Histórico do paciente"> <a
+                            href="patient-records.html"></a></i>
                     <i class="fa-solid fa-pen" title="Editar informações do paciente"></i>
                     <i class="fa-solid fa-ban" title="Inativar paciente"></i>
                     <i class="fa-solid fa-arrows-spin" title="Reativar paciente"></i>
@@ -150,16 +179,17 @@
                 <td>Mariana Gonçalves Fonseca Pena</td>
                 <td>Riquelme Batista Gomes da Silva</td>
                 <td>24/06/2002</td>
-                <td>B2</td>
-                <td>ALA 18</td>
-                <td>4 Dias</td>
-                <td>10 dias</td>
+                <td>L5</td>
+                <td>ALA-4</td>
+                <td>05/11/2025</td>
+                <td>15 dias</td>
                 <td>Vermelho</td>
                 <td>Ativado</td>
                 <td class="action-icons">
-                    <a href="questionnaire.html"><i class="fa-solid fa-sheet-plastic"
-                            title="Questionário Safer Red2Green"></i></a>
-                    <a href="patient-records.html"><i class="fa-regular fa-clock" title="Histórico do paciente"></i></a>
+                    <i class="fa-solid fa-sheet-plastic" title="Questionário Safer Red2Green"><a
+                            href="questionnaire.html"></a></i>
+                    <i class="fa-regular fa-clock" title="Histórico do paciente"> <a
+                            href="patient-records.html"></a></i>
                     <i class="fa-solid fa-pen" title="Editar informações do paciente"></i>
                     <i class="fa-solid fa-ban" title="Inativar paciente"></i>
                     <i class="fa-solid fa-arrows-spin" title="Reativar paciente"></i>
@@ -170,16 +200,17 @@
                 <td>Mariana Gonçalves Fonseca Pena</td>
                 <td>Riquelme Batista Gomes da Silva</td>
                 <td>24/06/2002</td>
-                <td>B2</td>
-                <td>ALA 18</td>
-                <td>4 Dias</td>
-                <td>10 dias</td>
+                <td>L5</td>
+                <td>ALA-4</td>
+                <td>05/11/2025</td>
+                <td>15 dias</td>
                 <td>Vermelho</td>
                 <td>Ativado</td>
                 <td class="action-icons">
-                    <a href="questionnaire.html"><i class="fa-solid fa-sheet-plastic"
-                            title="Questionário Safer Red2Green"></i></a>
-                    <a href="patient-records.html"><i class="fa-regular fa-clock" title="Histórico do paciente"></i></a>
+                    <i class="fa-solid fa-sheet-plastic" title="Questionário Safer Red2Green"><a
+                            href="questionnaire.html"></a></i>
+                    <i class="fa-regular fa-clock" title="Histórico do paciente"> <a
+                            href="patient-records.html"></a></i>
                     <i class="fa-solid fa-pen" title="Editar informações do paciente"></i>
                     <i class="fa-solid fa-ban" title="Inativar paciente"></i>
                     <i class="fa-solid fa-arrows-spin" title="Reativar paciente"></i>
@@ -190,56 +221,61 @@
                 <td>Mariana Gonçalves Fonseca Pena</td>
                 <td>Riquelme Batista Gomes da Silva</td>
                 <td>24/06/2002</td>
-                <td>B2</td>
-                <td>ALA 18</td>
-                <td>4 Dias</td>
-                <td>10 dias</td>
+                <td>L5</td>
+                <td>ALA-4</td>
+                <td>05/11/2025</td>
+                <td>15 dias</td>
                 <td>Vermelho</td>
-                <td>Desativado</td>
+                <td>Ativado</td>
                 <td class="action-icons">
-                    <a href="questionnaire.html"><i class="fa-solid fa-sheet-plastic"
-                            title="Questionário Safer Red2Green"></i></a>
-                    <a href="patient-records.html"><i class="fa-regular fa-clock" title="Histórico do paciente"></i></a>
+                    <i class="fa-solid fa-sheet-plastic" title="Questionário Safer Red2Green"><a
+                            href="questionnaire.html"></a></i>
+                    <i class="fa-regular fa-clock" title="Histórico do paciente"> <a
+                            href="patient-records.html"></a></i>
                     <i class="fa-solid fa-pen" title="Editar informações do paciente"></i>
                     <i class="fa-solid fa-ban" title="Inativar paciente"></i>
                     <i class="fa-solid fa-arrows-spin" title="Reativar paciente"></i>
                     <i class="fa-solid fa-house-medical" title="Cancelar alta"></i>
                 </td>
             </tr>
+            
             <tr>
                 <td>Mariana Gonçalves Fonseca Pena</td>
                 <td>Riquelme Batista Gomes da Silva</td>
                 <td>24/06/2002</td>
-                <td>B2</td>
-                <td>ALA 18</td>
-                <td>4 Dias</td>
-                <td>10 dias</td>
+                <td>L5</td>
+                <td>ALA-4</td>
+                <td>05/11/2025</td>
+                <td>15 dias</td>
                 <td>Vermelho</td>
-                <td>Desativado</td>
+                <td>Ativado</td>
                 <td class="action-icons">
-                    <a href="questionnaire.html"><i class="fa-solid fa-sheet-plastic"
-                            title="Questionário Safer Red2Green"></i></a>
-                    <a href="patient-records.html"><i class="fa-regular fa-clock" title="Histórico do paciente"></i></a>
+                    <i class="fa-solid fa-sheet-plastic" title="Questionário Safer Red2Green"><a
+                            href="questionnaire.html"></a></i>
+                    <i class="fa-regular fa-clock" title="Histórico do paciente"> <a
+                            href="patient-records.html"></a></i>
                     <i class="fa-solid fa-pen" title="Editar informações do paciente"></i>
                     <i class="fa-solid fa-ban" title="Inativar paciente"></i>
                     <i class="fa-solid fa-arrows-spin" title="Reativar paciente"></i>
                     <i class="fa-solid fa-house-medical" title="Cancelar alta"></i>
                 </td>
             </tr>
+            
             <tr>
                 <td>Mariana Gonçalves Fonseca Pena</td>
                 <td>Riquelme Batista Gomes da Silva</td>
                 <td>24/06/2002</td>
-                <td>B2</td>
-                <td>ALA 18</td>
-                <td>4 Dias</td>
-                <td>10 dias</td>
+                <td>L5</td>
+                <td>ALA-4</td>
+                <td>05/11/2025</td>
+                <td>15 dias</td>
                 <td>Vermelho</td>
-                <td>Desativado</td>
+                <td>Ativado</td>
                 <td class="action-icons">
-                    <a href="questionnaire.html"><i class="fa-solid fa-sheet-plastic"
-                            title="Questionário Safer Red2Green"></i></a>
-                    <a href="patient-records.html"><i class="fa-regular fa-clock" title="Histórico do paciente"></i></a>
+                    <i class="fa-solid fa-sheet-plastic" title="Questionário Safer Red2Green"><a
+                            href="questionnaire.html"></a></i>
+                    <i class="fa-regular fa-clock" title="Histórico do paciente"> <a
+                            href="patient-records.html"></a></i>
                     <i class="fa-solid fa-pen" title="Editar informações do paciente"></i>
                     <i class="fa-solid fa-ban" title="Inativar paciente"></i>
                     <i class="fa-solid fa-arrows-spin" title="Reativar paciente"></i>
@@ -250,22 +286,48 @@
                 <td>Mariana Gonçalves Fonseca Pena</td>
                 <td>Riquelme Batista Gomes da Silva</td>
                 <td>24/06/2002</td>
-                <td>B2</td>
-                <td>ALA 18</td>
-                <td>4 Dias</td>
-                <td>10 dias</td>
-                <td>Verde</td>
-                <td>Desativado</td>
+                <td>L5</td>
+                <td>ALA-4</td>
+                <td>05/11/2025</td>
+                <td>15 dias</td>
+                <td>Vermelho</td>
+                <td>Ativado</td>
                 <td class="action-icons">
-                    <a href="questionnaire.html"><i class="fa-solid fa-sheet-plastic"
-                            title="Questionário Safer Red2Green"></i></a>
-                    <a href="patient-records.html"><i class="fa-regular fa-clock" title="Histórico do paciente"></i></a>
+                    <i class="fa-solid fa-sheet-plastic" title="Questionário Safer Red2Green"><a
+                            href="questionnaire.html"></a></i>
+                    <i class="fa-regular fa-clock" title="Histórico do paciente"> <a
+                            href="patient-records.html"></a></i>
                     <i class="fa-solid fa-pen" title="Editar informações do paciente"></i>
                     <i class="fa-solid fa-ban" title="Inativar paciente"></i>
                     <i class="fa-solid fa-arrows-spin" title="Reativar paciente"></i>
                     <i class="fa-solid fa-house-medical" title="Cancelar alta"></i>
                 </td>
             </tr>
+            <tr>
+                <td>Mariana Gonçalves Fonseca Pena</td>
+                <td>Riquelme Batista Gomes da Silva</td>
+                <td>24/06/2002</td>
+                <td>L5</td>
+                <td>ALA-4</td>
+                <td>05/11/2025</td>
+                <td>15 dias</td>
+                <td>Vermelho</td>
+                <td>Ativado</td>
+                <td class="action-icons">
+                    <i class="fa-solid fa-sheet-plastic" title="Questionário Safer Red2Green"><a
+                            href="questionnaire.html"></a></i>
+                    <i class="fa-regular fa-clock" title="Histórico do paciente"> <a
+                            href="patient-records.html"></a></i>
+                    <i class="fa-solid fa-pen" title="Editar informações do paciente"></i>
+                    <i class="fa-solid fa-ban" title="Inativar paciente"></i>
+                    <i class="fa-solid fa-arrows-spin" title="Reativar paciente"></i>
+                    <i class="fa-solid fa-house-medical" title="Cancelar alta"></i>
+                </td>
+            </tr>
+            
+            
+
+
 
 
         </table>

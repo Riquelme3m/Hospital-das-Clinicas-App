@@ -252,8 +252,16 @@ body {
     width: 90%;
     margin-bottom: 2rem;
     position: relative;
+    font-size:0.8rem;
 }
 
+.table-container th  i{
+    font-size: 1rem;
+}
+.patient{
+    min-width:250px;
+    
+}
 
 .filter-wrapper {
     position: relative;
@@ -293,15 +301,23 @@ body {
 
 
 
-
+.table-container{
+    
+    height:800px;
+    width:99%;
+}
 
 .table-container table {
     min-width: max-content;
+    width:100%;
+    
 
 
 }
 
-.table-container table thead {}
+.table-container table thead {
+    border:2px solid red;
+}
 
 .table-container table thead tr {}
 
@@ -520,7 +536,7 @@ body {
 
 @media screen and (min-width:1440px) {
     .table-container {
-        justify-content: center;
+        justify-content: start;
 
     }
 
